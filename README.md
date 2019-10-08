@@ -5,6 +5,9 @@
 [![Release](https://img.shields.io/github/release/doccodes/wemo.svg)](https://github.com/DocCodes/wemo/releases/latest)
 [![Beta](https://img.shields.io/github/release/doccodes/wemo/all.svg?label=nightly)](https://github.com/DocCodes/wemo)
 
+## What is this branch?
+Basically I didn't need the script to do the port sweep that it does. So I just branched it so that it'd talk to my specific device in the office.
+
 ## Installation
 ### Windows
 ```

@@ -15,10 +15,8 @@ __status__ = "Production"
 
 class switch:
    def __init__(self, ip):
-      check_port_result = self.check(ip)
-      if(check_port_result == 0): exit
       self.ip = ip
-      self.port = check_port_result
+      self.port = 49153
       self.full = f'{self.ip}:{self.port}'
       self.url = f'http://{self.full}/upnp/control/basicevent1'
       self.status = self.getStatus()
@@ -52,16 +50,6 @@ class switch:
       beg = txt.index(f'<{tag}>')
       end = txt.index(f'</{tag}>')
       return txt[beg+ln:end]
-   def check(self, ip):
-      port = 0
-      for test in range(49152, 49156):
-         try:
-            get(f'http://{ip}:{test}')
-         except:
-            pass
-         else:
-            port = test
-      return port
 
 if __name__ == '__main__':
    print("Hello Console!")
